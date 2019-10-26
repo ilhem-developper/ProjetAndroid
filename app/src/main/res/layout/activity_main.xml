@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_weight="1"
+            android:text="Prix initial :"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/PrixInitial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="Prix initial :"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/TL"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:layout_below="@id/LL1"
+        android:layout_marginTop="1dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TVA"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:text="TVA :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/RGB"
+                android:layout_width="126dp"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/RB1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="19%"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/RB2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12%" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/Remise"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:text="Remise :"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/Chk"
+                android:layout_width="86dp"
+                android:layout_height="match_parent"
+                android:text="10%" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Calc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculer" />
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/Raz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RAZ" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_below="@id/TL"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/PrixFinal"
+            android:layout_width="27dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prix final"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/res"
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
+
